@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { stripe } from '../components/services/stripe';
 
@@ -39,7 +39,7 @@ export default function Home({ product }: HomeProps) {
 }
 
 //this is for getting the Stripe API in next.js
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   //this is the API Id from the Product we created in Stripe
   const price = await stripe.prices.retrieve('price_1IdidlJ4fxCuj4z4G02MAYdd')
 
@@ -54,6 +54,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return{
     props: {
       product
-    }
+    },
+    revalidate: 60 * 60 * 24 // 24 hours
+    //this is for the static HTML to dure 24 hours
   }
 }
