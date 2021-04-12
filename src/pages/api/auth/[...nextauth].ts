@@ -10,12 +10,9 @@ export default NextAuth({
     Providers.GitHub({
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      scope: 'read:user'
+      scope: 'read:user',
     }),
   ],
-  jwt: {
-    signingKey: process.env.SIGNING_KEY,
-  },
   callbacks: {
     //this is to create our database in FaunaDB
     async signIn(user, account, profile) {
