@@ -5,6 +5,7 @@ import { stripe } from '../../../services/stripe';
 export async function saveSubscription(
     subscriptionId: string,
     customerId: string,
+    createAction = false,
 ) {
     // search the user in FaunaDB with the ID { customerId }
     console.log(subscriptionId, customerId);
@@ -31,11 +32,28 @@ export async function saveSubscription(
     }
 
     // save the subscription data in FaunaDB 
-    await fauna.query(
-        q.Create(
-            q.Collection('subscriptions'),
-            { data: subscriptionData }
+    if(createAction) {
+        await fauna.query(
+            q.Create(
+                q.Collection('subscriptions'),
+                { data: subscriptionData }
+            )
         )
-    )
-
+    } else {
+        //this is for update the database
+        await fauna.query(
+            q.Replace(
+                q.Select(
+                    "ref",
+                    q.Get(
+                        q.Match(
+                            q.Index('subscription_by_id'),
+                            subscriptionId,
+                        )
+                    )
+                ),
+                { data: subscriptionData }
+            )
+        )
+    }
 }
