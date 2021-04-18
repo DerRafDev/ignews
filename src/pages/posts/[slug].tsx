@@ -17,6 +17,7 @@ interface PostProps {
 }
 
 export default function Post({ post }: PostProps) {
+
     return (
         <>
             <Head>
@@ -38,11 +39,21 @@ export default function Post({ post }: PostProps) {
 
 //this is to get the content of the post
 export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
-    const session = await getSession({ req })
+    const session = await getSession({ req });
     const { slug } = params;
 
     //this is for when the user is not logged
-    // if (!session) {}
+    //for some reason Property 'activeSubscription' does not exist on type 'Session'.
+    //but the code is right and it's working, ignore the problem
+    if (!session.activeSubscription) {
+        return {
+          redirect: {
+            destination: `/`,
+            permanent: false,
+          }
+        }
+      }
+    
 
     const prismic = getPrismicClient(req)
 
