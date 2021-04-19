@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Terminal Chat
+This Application is a Newsletter about React, in which the user can register using his GitHub account and in order for the user to be able to read the posts, he must be a subscriber. This application was built using Next.js, and for payment, the Stripe API was used, using Axios for the communication of the API, in the case of the backend a Serverless application was used, using FaunaDB, and for the creation and publication of Posts, a CMS was used, in this case, the Prismic CMS
 
-## Getting Started
+## Objectives 📎
 
-First, run the development server:
+The purpose of this application was to learn Next.js, serverless applications, and to use payment APIs.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Techologies 🚀
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Next.js       -   10.1.3
+* TypeScript    -   4.2.3
+* Axios         -   0.21.1
+* Stripe API    -   8.142.0
+* Prismic CMS   -   4.0.0
+* FaunaDB       -   4.1.3
+* Sass          -   1.32.8
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## How to Run in your Terminal 👩🏻‍💻
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+To run, you have first to download the packages:
+>yarn
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Then, you have to:
+>yarn dev
 
-## Learn More
+## Result 🖥️
 
-To learn more about Next.js, take a look at the following resources:
+### Main Page
+![alt text]()
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Subscription - Stripe
+![alt text]()
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Post Page
+![alt text]()
 
-## Deploy on Vercel
+### Post Page for User that subscribes
+![alt text]()
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Post Page for User that didn't subscribe
+![alt text]()
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact 📞
+Created by [@DerRaf](https://www.linkedin.com/in/rafael-sordi/) - feel free to contact me!

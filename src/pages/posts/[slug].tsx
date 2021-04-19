@@ -45,7 +45,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
     //this is for when the user is not logged
     //for some reason Property 'activeSubscription' does not exist on type 'Session'.
     //but the code is right and it's working, ignore the problem
-    if (!session.activeSubscription) {
+    if (!session?.activeSubscription) {
         return {
           redirect: {
             destination: `/`,
