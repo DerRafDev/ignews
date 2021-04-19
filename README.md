@@ -26,19 +26,19 @@ Then, you have to:
 ## Result 🖥️
 
 ### Main Page
-![alt text]()
+![alt text](https://github.com/DerRafDev/ignews/blob/main/img/home.png)
 
 ### Subscription - Stripe
-![alt text]()
+![alt text](https://github.com/DerRafDev/ignews/blob/main/img/subscription-stripe.png)
 
 ### Post Page
-![alt text]()
+![alt text](https://github.com/DerRafDev/ignews/blob/main/img/post.png)
 
 ### Post Page for User that subscribes
-![alt text]()
+![alt text](https://github.com/DerRafDev/ignews/blob/main/img/post-subscriber.png)
 
 ### Post Page for User that didn't subscribe
-![alt text]()
+![alt text](https://github.com/DerRafDev/ignews/blob/main/img/post-not-subscriber.png)
 
 ## Contact 📞
 Created by [@DerRaf](https://www.linkedin.com/in/rafael-sordi/) - feel free to contact me!
