@@ -1,5 +1,5 @@
 # Terminal Chat
-This Application is a Newsletter about React, in which the user can register using his GitHub account and in order for the user to be able to read the posts, he must be a subscriber. This application was built using Next.js, and for payment, the Stripe API was used, using Axios for the communication of the API, in the case of the backend a Serverless application was used, using FaunaDB, and for the creation and publication of Posts, a CMS was used, in this case, the Prismic CMS
+This Application is a Newsletter about React, in which the user can register using his GitHub account and in order for the user to be able to read the posts, he must be a subscriber. This application was built using Next.js, and for payment, the Stripe API was used, using Axios for the communication of the API, in the case of the backend a Serverless application was used, using FaunaDB, and for the creation and publication of Posts, a CMS was used, in this case, the Prismic CMS. We also use Jest to test the application.
 
 ## Objectives 📎
 
@@ -14,6 +14,7 @@ The purpose of this application was to learn Next.js, serverless applications, a
 * Prismic CMS   -   4.0.0
 * FaunaDB       -   4.1.3
 * Sass          -   1.32.8
+* Jest          -   27.0.1
 
 ## How to Run in your Terminal 👩🏻‍💻
 
